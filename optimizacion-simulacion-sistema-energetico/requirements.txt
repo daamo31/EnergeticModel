@@ -1,0 +1,13 @@
+pandas
+matplotlib
+seaborn
+numpy
+scipy
+pvlib
+pyomo
+pulp
+simpy
+scikit-learn
+plotly
+dash
+streamlit
