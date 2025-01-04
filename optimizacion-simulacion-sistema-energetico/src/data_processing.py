@@ -1,7 +1,7 @@
-def process_raw_data(raw_data_path, processed_data_path):
-    import pandas as pd
-    import os
+import pandas as pd
+import os
 
+def process_raw_data(raw_data_path, processed_data_path):
     # Cargar datos crudos
     raw_data_files = [f for f in os.listdir(raw_data_path) if f.endswith('.csv')]
     data_frames = []
@@ -20,7 +20,5 @@ def process_raw_data(raw_data_path, processed_data_path):
     cleaned_data.to_csv(os.path.join(processed_data_path, 'processed_data.csv'), index=False)
 
 def load_processed_data(processed_data_path):
-    import pandas as pd
-
     # Cargar datos procesados
     return pd.read_csv(os.path.join(processed_data_path, 'processed_data.csv'))
