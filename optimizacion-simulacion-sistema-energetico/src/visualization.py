@@ -1,4 +1,5 @@
 from dash import Dash, dcc, html
+from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 
 app = Dash(__name__)
@@ -13,8 +14,8 @@ app.layout = html.Div([
 
 # Función para actualizar el gráfico de generación
 @app.callback(
-    dash.dependencies.Output('generacion-grafico', 'figure'),
-    [dash.dependencies.Input('generacion-grafico', 'id')]
+    Output('generacion-grafico', 'figure'),
+    [Input('generacion-grafico', 'id')]
 )
 def update_generacion_graph(input_value):
     # Aquí se debe incluir la lógica para obtener los datos de generación
@@ -28,8 +29,8 @@ def update_generacion_graph(input_value):
 
 # Función para actualizar el gráfico de consumo
 @app.callback(
-    dash.dependencies.Output('consumo-grafico', 'figure'),
-    [dash.dependencies.Input('consumo-grafico', 'id')]
+    Output('consumo-grafico', 'figure'),
+    [Input('consumo-grafico', 'id')]
 )
 def update_consumo_graph(input_value):
     # Aquí se debe incluir la lógica para obtener los datos de consumo
@@ -42,8 +43,8 @@ def update_consumo_graph(input_value):
 
 # Función para actualizar el gráfico de costos y emisiones
 @app.callback(
-    dash.dependencies.Output('costos-emisiones-grafico', 'figure'),
-    [dash.dependencies.Input('costos-emisiones-grafico', 'id')]
+    Output('costos-emisiones-grafico', 'figure'),
+    [Input('costos-emisiones-grafico', 'id')]
 )
 def update_costos_emisiones_graph(input_value):
     # Aquí se debe incluir la lógica para obtener los datos de costos y emisiones
