@@ -25,7 +25,7 @@ def load_energy_demand_data(file_path):
 
 def main():
     solar_api_url = 'https://power.larc.nasa.gov/api/temporal/hourly/point?start=20100101&end=20221231&latitude=41.66&longitude=-0.88&community=re&parameters=ALLSKY_SFC_SW_DWN&format=json&user=EnergeticHIbrid&header=true&time-standard=lst'
-    wind_api_url = 'https://power.larc.nasa.gov/api/temporal/hourly/point?start=20100101&end=20221231&latitude=41.66&longitude=-0.88&community=re&parameters=WS2M&format=json&user=EnergeticHIbrid&header=true&time-standard=lst'
+    wind_api_url = 'https://power.larc.nasa.gov/api/temporal/hourly/point?start=20220101&end=20221231&latitude=41.66&longitude=-0.88&community=re&parameters=WS2M&format=json&user=EnergeticHIbrid&header=true&time-standard=lst'
     
     raw_data_dir = os.path.join('data', 'raw')
     os.makedirs(raw_data_dir, exist_ok=True)
