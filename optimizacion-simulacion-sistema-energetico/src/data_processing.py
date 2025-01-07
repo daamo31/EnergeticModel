@@ -22,3 +22,4 @@ def process_raw_data(raw_data_path, processed_data_path):
 def load_processed_data(processed_data_path):
     # Cargar datos procesados
     return pd.read_csv(os.path.join(processed_data_path, 'processed_data.csv'))
+
